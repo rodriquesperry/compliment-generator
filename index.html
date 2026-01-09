@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A high-performance modular compliment generator for professional recognition.">
+    <title>Glow | Professional Compliment Generator</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="app-container">
+        <header class="app-header">
+            <h1 class="brand">Glow</h1>
+            <p class="tagline">Thoughtful, modular recognition for professionals.</p>
+        </header>
+
+        <section class="generator-card" id="main-card">
+            <div class="input-group">
+                <label for="userName">Personalize for:</label>
+                <input type="text" id="userName" placeholder="Enter a name..." aria-label="Recipient Name">
+            </div>
+
+            <div class="display-area" aria-live="polite" id="compliment-box">
+                <p id="compliment-text">Click the button below to generate a moment of brilliance.</p>
+            </div>
+
+            <div class="action-bar">
+                <button id="generateBtn" class="btn btn-primary">Generate Compliment</button>
+                <button id="shareBtn" class="btn btn-secondary" title="Copy to clipboard">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+                    <span>Share</span>
+                </button>
+            </div>
+        </section>
+
+        <footer class="app-footer">
+            <p>Engineered with precision for human connection.</p>
+        </footer>
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden" role="alert">Copied to clipboard!</div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
